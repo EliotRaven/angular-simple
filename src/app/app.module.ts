@@ -7,7 +7,6 @@ import {TodoFormComponent} from "./todo-form/todo-form.component";
 import {TodoListComponent} from "./todo-list/todo-list.component";
 import {TodoItemComponent} from "./todo-item/todo-item.component";
 
-import { TodoService } from "./services/todo.service";
 
 @NgModule({
   imports: [
@@ -20,7 +19,7 @@ import { TodoService } from "./services/todo.service";
       TodoListComponent,
       TodoItemComponent,
   ],
-  providers: [TodoService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -20,11 +20,11 @@ export class TodoListComponent implements OnInit {
   }
 
   delete(todo: Todo){
-    let index = this.todoList.indexOf(todo)
+    this.todoService.delete(todo)
+  }
 
-    if(index > -1){
-      this.todoList.splice(index, 1)
-    }
+  toggle(todo: Todo){
+    this.todoService.toggle(todo)
   }
 
 }
