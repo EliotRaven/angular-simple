@@ -4,27 +4,7 @@
 </header>
 
 <main>
-  <form class="form todo-form" (submit)="createTodo($event, titleInput.value)">
-    <input type="text" placeholder="write todo" #titleInput>
-    <button type="submit">Add</button>
-  </form>
-
-  <section class="todo-list" *ngIf="todoList.length">
-    <div class="todo-item" *ngFor="let todo of todoList" [ngClass]="{'completed': todo.completed}">
-      <button class="checkbox icon" (click)="toggle(todo)">
-        <i class="material-icons">
-          {{todo.completed ? 'check_box' : 'check_box_outline_blank' }}
-        </i>
-      </button>
-
-      <span class="title">{{ todo.title }}</span>
-
-      <div class="actions">
-        <button class="delete icon" (click)="delete(todo)">
-          <i class="material-icons">delete</i>
-        </button>
-      </div>
-    </div>
-  </section>
+  <app-todo-form></app-todo-form>
+  <app-todo-list></app-todo-list>
 </main>
 
